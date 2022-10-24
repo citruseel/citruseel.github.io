@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Curtis Lee</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Curtis Lee</h1>
+			<nav>
+				<a href="../index.html" class="button">Back</a>
+			</nav>
+		</header>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Obstacle Course Traversal Using SLAM</h2>
+					<p>Explore and map an unknown area with a TurtleBot3</p>
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+					<p style="text-align:center;"><img src="images/SLAMreal.jpg" alt="" width="60%" /></p>
+					<!-- <h3 class=" major">Description</h3> -->
+					<p>In this project, we were given a random obstacle course to explore and navigate through within 5
+						minutes using a TurtleBot3. Attached to the TurtleBot3 was a LiDAR that gave a point cloud of
+						objects it detected. By representing the map as a grid, we used the point cloud readings to
+						generate a configuration space along with potential frontiers to explore.
+						Then, with A* path planning and PD controllers, the TurtleBot3 traversed to those frontier
+						locations and obtained more readings for an internal map.
+					</p>
+					<p>Once the internal map of the entire course was created, the TurtleBot3 was relocated to a
+						random spot on the course, and then given a target location to reach. To re-localize itself, we
+						used a probablistic monte-carlo localization (AMCL). Overall, we completed the designated
+						objective with the physical robot in about 2 mins (2.5 times faster than requested).
+					</p>
+
+					<section id="two">
+						<!-- Need this section id for poptrox to work-->
+						<div class="row" style="padding-top: 2em;">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="../images/thumbs/SLAMexplore.png" class="image fit thumb"><img
+										src="../images/thumbs/SLAMexplore.png" alt="" /></a>
+								<h3>RVIZ view of TurtleBot3 and Algorithms</h3>
+								<p>The pink dot represents the starting point of exploration. The black line represents
+									the A* path. The Green dots are the point cloud readings from the LiDAR. The blue is
+									the unexplored regions, with the dark blue being the frontier. Orange is the
+									generated configuration-space.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/SLAMgazebo.png" class="image fit thumb"><img src="images/SLAMgazebo.png"
+										alt="" /></a>
+								<h3>Gazebo Simulation of Map and TurtleBot3</h3>
+								<p>To speed up testing, we simulated the TurtleBot3 and a potential obstacle course in
+									Gazebo. This allowed us to tune our A* path planning heuristic, and determine if our
+									frontier recognition algorithm is functional without needing to use physical bot or
+									obstacle course.</p>
+							</article>
+						</div>
+					</section>
+
+					<h2 style="text-align:center; padding-top: 2em;"> Simulation Demo</h2>
+					<p style="text-align:center;">
+						<video width="80%" controls>
+							<source src="videos/rbe3002_fast_music.mp4" type="video/mp4">
+						</video>
+						</br>
+						A sped-up video of the simulation done in Gazebo, displayed in RVIZ.
+						<a target="_blank"
+							href="https://docs.google.com/document/d/1iTwtDPpAnMOnmFjxHV4w4VY4Zd0bYxrzYJKJwRaczb0/edit?usp=sharing">
+							<u>Click here</u></a>
+						to see the submitted report.
+					</p>
+
+				</div>
+				<p style="font-size:small">Design in part by <a href="http://html5up.net" target="_blank">HTML5 UP</a>
+				</p>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

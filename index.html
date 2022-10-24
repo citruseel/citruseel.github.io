@@ -1,1 +1,182 @@
-"Hello World" 
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Curtis Lee</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script>
+		function SubForm() {
+			$.ajax({
+				url: "https://api.apispreadsheets.com/data/efrJ3gZkf8j5p7C1/",
+				type: "post",
+				data: $("#myForm").serializeArray(),
+				success: function () {
+					alert("Form Data Submitted :)")
+				},
+				error: function () {
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/my_avatar.jpg" alt="" /></a>
+			<h1>I am <strong>Curtis Lee</strong>, a Robotics Engineer<br />
+				with a focus in software.</h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>About Me</h2>
+			</header>
+			<p>I'm currently a senior at Worcester Polytechnic Institute graduating in May 2023 with a BS and MS
+				in Robotics Engineering. I have a strong focus in robotic software and deep interest in controls and
+				motion
+				planning. My goal is to make complex mechanisms safe and more controllable for reliable automation.</p>
+			<!-- <ul class="actions">
+				<li><a href="#" class="button">Learn More</a></li>
+			</ul> -->
+		</section>
+
+		<!-- Two -->
+		<section id="two">
+			<h2>Recent Projects</h2>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/Recommender.html" class="im fit proj"><img
+							src="images/thumbs/Recommender.png" alt="" /></a>
+					<h3>The Recommender</h3>
+					<p>A web application to assist socially awkward people with conversing</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/SLAM.html" class="im fit proj"><img src="images/thumbs/SLAMexplore.png"
+							alt="" /></a>
+					<h3>Obstacle Course Traversal Using SLAM</h3>
+					<p>Explore and map an unknown area with a TurtleBot3</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/colorBallSorter.html" class="im fit proj"><img
+							src="images/thumbs/color_ball_sorter.png" alt="" /></a></a>
+					<h3>Colored Ball Sorter</h3>
+					<p>Sort colored balls using a 3 DoF 3D printed arm</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/ABB.html" class="im fit proj"><img src="images/thumbs/ABB_thumb.jpg"
+							alt="" /></a>
+					<h3>ABB IRB140 Palletization</h3>
+					<p>Palletize metal blocks with a 6 DoF industrial robot arm</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/softeng.html" class="im fit proj"><img src="images/thumbs/SoftEng.png"
+							alt="" /></a>
+					<h3>Brigham & Women’s Hospital Application</h3>
+					<p>A multifunctional application to assist hospital staff and patients</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="html5up-solid-state/combat.html" class="im fit proj"><img
+							src="images/thumbs/combatRobot.jpg" alt="" /></a>
+					<h3>Norwalk Turkey Fight</h3>
+					<p>Fight against other beetleweight (3lb) combat robots</p>
+				</article>
+			</div>
+			<!-- <ul class="actions">
+				<li><a href="#" class="button">Full Portfolio</a></li>
+			</ul> -->
+		</section>
+
+		<!-- Three -->
+		<section id="three">
+			<h2>Get In Touch</h2>
+			<p>If you have any questions or would like to connect with me, feel free to contact me at any of the methods
+				below.</p>
+			<div class="row">
+				<div class="col-8 col-12-small">
+					<form method="post" action="#" id="myForm">
+						<div class="row gtr-uniform gtr-50">
+							<div class="col-6 col-12-xsmall"><input type="text" name="Name" id="name"
+									placeholder="Name" /></div>
+							<div class="col-6 col-12-xsmall"><input type="email" name="Email" id="email"
+									placeholder="Email" /></div>
+							<div class="col-12"><textarea name="Message" id="message" placeholder="Message"
+									rows="4"></textarea></div>
+						</div>
+					</form>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" onclick="SubForm()" /></li>
+					</ul>
+					<p style="font-size:small">Design in part by <a href="http://html5up.net">HTML5 UP</a></p>
+				</div>
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+							5 Gavin Cir.<br />
+							Andover, MA 01810<br />
+							United States
+						</li>
+						<li>
+							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+							978-242-4475
+						</li>
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="mailto: clee2@wpi.edu">clee2@wpi.edu</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+				<li><a href="https://www.linkedin.com/in/citruseel/" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/clee2023" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+				<li><a href="mailto: clee2@wpi.edu" class="icon solid fa-envelope"><span class="label">Email</span></a>
+				</li>
+			</ul>
+			<!-- <ul class="copyright">
+				<li>&copy; Untitled</li>
+				<li>Template: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul> -->
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
