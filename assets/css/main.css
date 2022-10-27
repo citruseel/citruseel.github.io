@@ -219,7 +219,7 @@ a:hover {
 strong,
 b {
 	color: #787878;
-	font-weight: 400;
+	font-weight: 575;
 }
 
 em,
@@ -2806,7 +2806,8 @@ input[type="button"]:disabled,
 	background-position: top left, top left;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, 150%;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgb(255, 255, 255);
+	/* Used to be alpha 0.5 */
 	height: 100%;
 	left: 0;
 	padding: 8em 4em;
@@ -2846,7 +2847,8 @@ input[type="button"]:disabled,
 }
 
 #header h1 {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgb(236, 234, 234);
+	/* Used to be alpha 0.5 and 255 255 255 */
 	font-size: 1.35em;
 	line-height: 1.75em;
 	margin: 0;
